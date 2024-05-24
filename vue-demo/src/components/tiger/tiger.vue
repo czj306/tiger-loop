@@ -186,7 +186,7 @@ export default {
         newheight = parseInt(width / (this.rlc.ew / this.c_ah)) // 比例计算 px适配机型
         this.initStart = parseInt((this.rlc.ih / this.c_ah) * newheight) // 根据参照下沉高度计算出真实高度
         this.ph = newheight // 精灵图总高度
-        ps.forEach(ele => {
+        Array.from(ps).forEach(ele => {
           ele.style.backgroundImage = `url(${this.img})`
           ele.style.backgroundSize = `100% ${newheight}px`
           ele.style.backgroundPositionY = `${this.initStart}px`
